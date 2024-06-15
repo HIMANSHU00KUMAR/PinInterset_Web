@@ -9,7 +9,7 @@ const upload = require("./mutler") ;
 const mongoose = require("mongoose");
 
 
-mongoose.connect("mongodb+srv://atul:ogESo2dmCVifuap1@cluster0.hkxxfhd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0s");
+mongoose.connect("mongodb+srv://himanshu:Mongo@cluster0.xvr7fqc.mongodb.net/");
 const { stringify } = require("querystring");
 
 router.get("/", function (req, res, next) {
