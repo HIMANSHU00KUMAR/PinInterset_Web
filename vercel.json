@@ -1,5 +1,20 @@
-{ 
+{
     "version": 2,
-    "rewrites": [{ "source": "./index.js", "use":"@vercel/node" }],
-    "routes" : [{"source" : "/(.*)", "dest": "/" }]
-}
+    "name": "server",
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "index.js"
+      },
+      {
+        "src": "/image/(.*)",
+        "dest": "/public/image/$1"
+      }
+    ]
+  }

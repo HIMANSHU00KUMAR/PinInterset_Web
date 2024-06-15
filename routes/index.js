@@ -5,7 +5,12 @@ const postModel = require("./post");
 const passport = require("passport");
 const localStrategy = require("passport-local");
 passport.use(new localStrategy(userModel.authenticate()));
-const upload = require("./mutler")
+const upload = require("./mutler") ;
+const mongoose = require("mongoose");
+
+
+mongoose.connect("mongodb+srv://atul:ogESo2dmCVifuap1@cluster0.hkxxfhd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0s");
+const { stringify } = require("querystring");
 
 router.get("/", function (req, res, next) {
   res.render("signup");
